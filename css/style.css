@@ -447,6 +447,7 @@ dd {
 .footerNav li {
 	list-style: none;
 	display: inline-block;
+	font-size: 2vw;
 	width: 10%;
 	min-width:60px;
 	text-transform: uppercase;
@@ -515,4 +516,6 @@ dd {
 		font-size: 2vw;
 		line-height: 1.5em;
 	}
+	.footerNav li {
+		font-size: 1vw;
 }
