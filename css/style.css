@@ -437,24 +437,18 @@ dd {
 }
 /* ここからフッター */
 
-.myName {
-	font-size: 6vw;
-}
-.schoolName {
-	font-size: 2vw;
-}
 .footer {
 	text-align: center;
 }
 .footerNav ul {
 	margin: 0;
-	padding: 30px;
+	padding: 10px;
 }
 .footerNav li {
 	list-style: none;
 	display: inline-block;
 	width: 10%;
-	min-width: 80px;
+	min-width:60px;
 	text-transform: uppercase;
 }
 .footerNav li:not(:last-child) {
@@ -479,6 +473,12 @@ dd {
 /* ここからメディアクエリ */
 
 @media screen and (min-width: 768px) {
+	.myName {
+		font-size: 6vw;
+	}
+	.schoolName {
+		font-size: 2vw;
+	}
 	.aboutMain {
 		padding-left: 20vw;
 		padding-right: 20vw;
