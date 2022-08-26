@@ -441,10 +441,7 @@ dd {
 	text-align: center;
 }
 .footerNav {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	padding-right: 0;
-	padding-left: 0;
+	padding: 0;
 .footerNav ul {
 	margin: 0;
 }
