@@ -442,7 +442,7 @@ dd {
 }
 .footerNav ul {
 	margin: 0;
-	padding: 0;
+	padding-inline-start: 0;
 }
 .footerNav li {
 	list-style: none;
