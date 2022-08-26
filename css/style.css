@@ -440,9 +440,13 @@ dd {
 .footer {
 	text-align: center;
 }
+.footerNav {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 0;
+	padding-left: 0;
 .footerNav ul {
 	margin: 0;
-	padding-inline-start: 0;
 }
 .footerNav li {
 	list-style: none;
