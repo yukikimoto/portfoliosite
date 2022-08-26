@@ -178,10 +178,11 @@ a, a:visited {
 	padding-bottom: 150px;
 }
 .myName {
-	font-size: 50px;
+	font-size: 8vw;
 }
 .schoolName {
-	font-size: 20px;
+	font-size: 3vw;
+	line-height: 1em;
 }
 .slider {
 	position: relative;
@@ -216,8 +217,8 @@ a, a:visited {
 	outline: none;
 	border-top: 2px solid #fff;
 	border-right: 2px solid #fff;
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 }
 .slick-prev {
 	left: 5%;
@@ -240,8 +241,8 @@ a, a:visited {
 .slick-dots button {
 	color: transparent;
 	outline: none;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	display: block;
 	border-radius: 50%;
 	background: #fff;
@@ -436,6 +437,12 @@ dd {
 }
 /* ここからフッター */
 
+.myName {
+	font-size: 6vw;
+}
+.schoolName {
+	font-size: 2vw;
+}
 .footer {
 	text-align: center;
 }
