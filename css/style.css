@@ -1,0 +1,511 @@
+/* ここからヘッダー */
+
+.title {
+	text-align: start;
+	border-bottom: 2px solid #696969;
+	padding-top: 110px;
+}
+body {
+	background: #ede4e1;
+	font: 14px/21px Monaco, sans-serif;
+	color: #999;
+	text-size-adjust: 100%;
+	height: 100%;
+}
+.image1 {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+}
+a, a:visited {
+	text-decoration: none;
+	color: #696969;
+}
+/* It's Party Time! */
+
+.navMenu {
+	width: 320px;
+	height: 50px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #ececec;
+	box-shadow: 0 0 10px #000;
+	overflow: hidden;
+	backface-visibility: hidden;
+	transition: all 0.3s cubic-bezier(0.7, 0.01, 0.3, 1);
+	transition-delay: 400ms;
+}
+/*let your hair down and show the goods*/
+
+.shownav {
+	width: 320px;
+	height: 360px;
+}
+.dcMenu {
+	width: 50px;
+	height: 50px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.dcMenuTrigger {
+	position: absolute;
+	top: 0px;
+	left: 11px;
+	display: block;
+	width: 28px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 30;
+	transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+	transition-delay: 600ms;
+}
+.dcMenuTrigger span {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 3px;
+	margin-top: -2px;
+	background-color: #fff;
+	font-size: 0px;
+	user-select: none;
+	transition: all 0.5s;
+}
+.dcMenuOpen .dcMenuTrigger span {
+	background-color: transparent;
+}
+.dcMenuOpen .dcMenuTrigger {
+	left: 88%;
+	transition: all 0.4s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+.dcMenuTrigger span:before, .dcMenuTrigger span:after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(255, 255, 255);
+	content: "";
+	transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+.dcMenuTrigger span:before {
+	transform: translateY(-250%);
+}
+.dcMenuTrigger span:after {
+	transform: translateY(250%);
+}
+/*Just bust a move*/
+
+.dcMenuOpen .dcMenuTrigger span:before {
+	transform: translateY(0) rotate(45deg);
+}
+.dcMenuOpen .dcMenuTrigger span:after {
+	transform: translateY(0) rotate(-45deg);
+}
+.dcMenuClose .dcMenuTrigger:before {
+	animation: plusVertical 0.3s ease forwards;
+}
+.dcMenuClose .dcMenuTrigger:after {
+	animation: plusHorizontal 0.3s ease forwards;
+}
+.menuOverlay {
+	z-index: 10;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: none;
+}
+.menuOverlay.open {
+	background: #ececec;
+	height: 100%;
+}
+.menuOverlay ul {
+	position: absolute;
+	visibility: hidden;
+	list-style-type: none;
+	top: -40%;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	opacity: 0;
+	display: table-cell;
+	vertical-align: middle;
+	transition: all 0.6s cubic-bezier(0.7, 0, 0.36, 0.63);
+	transform: perspective(600px) rotateX(20deg) rotateY(-20deg);
+}
+.menuOverlay ul li {
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 100;
+	margin: 30px 0;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.menuOverlay ul li:after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 1px;
+	background: #333;
+	margin: 10px auto 0 auto;
+}
+.menuOverlay ul li:hover {
+	color: #eee;
+	cursor: pointer;
+}
+.menuOverlay.open ul {
+	top: 40px;
+	left: 0;
+	visibility: visible;
+	opacity: 1;
+	margin-top: 0;
+	transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+	transition: all 0.6s cubic-bezier(0.7, 0, 0.36, 0.63);
+	transition-delay: 400ms;
+}
+/* ここからメイン */
+
+.main {
+	text-align: center;
+}
+/* ここからHomeページ */
+
+.homeMain {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+.myName {
+	font-size: 50px;
+}
+.schoolName {
+	font-size: 20px;
+}
+.slider {
+	position: relative;
+	z-index: 1;
+	height: 1000px;
+	padding: 0;
+}
+.sliderItem1 {
+	background: url(../img/slider1.jpg)
+}
+.sliderItem2 {
+	background: url(../img/slider2.jpg)
+}
+.sliderItem3 {
+	background: url(../img/slider3.jpg)
+}
+.sliderItem4 {
+	background: url(../img/slider4.jpg)
+}
+.sliderItem {
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.slick-prev, .slick-next {
+	position: absolute;
+	z-index: 3;
+	top: 42%;
+	cursor: pointer;
+	outline: none;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	height: 25px;
+	width: 25px;
+}
+.slick-prev {
+	left: 2.5%;
+	transform: rotate(-135deg);
+}
+.slick-next {
+	right: 2.5%;
+	transform: rotate(45deg);
+}
+.slick-dots {
+	position: relative;
+	z-index: 3;
+	text-align: center;
+	margin: -50px 0 0 0;
+}
+.slick-dots li {
+	display: inline-block;
+	margin: 0 5px;
+}
+.slick-dots button {
+	color: transparent;
+	outline: none;
+	width: 8px;
+	height: 8px;
+	display: block;
+	border-radius: 50%;
+	background: #fff;
+}
+.slick-dots .slick-active button {
+	background: #333;
+}
+/* ここからAboutページ */
+
+.aboutMain {
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 5VW;
+	padding-bottom: 5VW;
+}
+.nameRuby {
+	font-size: 3vw;
+}
+.aboutName {
+	font-size: 9vw;
+	margin-top: 5vw;
+}
+.aboutSentence {
+	font-size: 3vw;
+	line-height: 2.2em;
+}
+/* ココからhobbyページ */
+
+.hobbyMain {
+	padding: 5vw;
+}
+.hobbyTitle {
+	font-size: 6vw;
+}
+dl {
+	text-align: start;
+}
+dt {
+	font-size: 5vw;
+	padding-top: 5vw;
+	padding-bottom: 1vw;
+}
+dd {
+	font-size: 3vw;
+	line-height: 1.5em;
+}
+/* ここからcontactページ */
+
+.Form {
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 720px;
+}
+@media screen and (max-width: 768px) {
+	.Form {
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 400px;
+	}
+}
+.Form-Item {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item {
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		flex-wrap: wrap;
+	}
+}
+.Form-Item:nth-child(5) {}
+.Form-Item-Label {
+	width: 100%;
+	max-width: 248px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Label {
+		max-width: inherit;
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+	}
+}
+.Form-Item-Label.isMsg {
+	margin-top: 8px;
+	margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Label.isMsg {
+		margin-top: 0;
+	}
+}
+.Form-Item-Label-Required {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #545454;
+	color: #fff;
+	font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Label-Required {
+		border-radius: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		width: 32px;
+		font-size: 10px;
+	}
+}
+.Form-Item-Input {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 48px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Input {
+		margin-left: 0;
+		margin-top: 18px;
+		height: 40px;
+		flex: inherit;
+		font-size: 15px;
+	}
+}
+.Form-Item-Textarea {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 216px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Textarea {
+		margin-top: 18px;
+		margin-left: 0;
+		height: 200px;
+		flex: inherit;
+		font-size: 15px;
+	}
+}
+.Form-Btn {
+	border-radius: 6px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 280px;
+	display: block;
+	letter-spacing: 0.05em;
+	background: #545454;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Btn {
+		margin-top: 24px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		width: 160px;
+		font-size: 16px;
+	}
+}
+/* ここからフッター */
+
+.footer {
+	text-align: center;
+}
+.footerNav ul {
+	margin: 0;
+	padding: 30px;
+}
+.footerNav li {
+	list-style: none;
+	display: inline-block;
+	width: 10%;
+	min-width: 80px;
+	text-transform: uppercase;
+}
+.footerNav li:not(:last-child) {
+	border-right: 2px solid #ddd;
+}
+.footerNav a {
+	text-decoration: none;
+	color: #333;
+}
+.footerNav a.current {
+	color: #00B0F0;
+	border-bottom: 2px solid #00B0F0;
+}
+.footerNav a:hover {
+	color: #F7CB4D;
+	border-bottom: 2px solid #F7CB4D;
+}
+.footerAddress {
+	font-size: small;
+	padding: 20px;
+}
+/* ここからメディアクエリ */
+
+@media screen and (min-width: 768px) {
+	.aboutMain {
+		padding-left: 20vw;
+		padding-right: 20vw;
+	}
+	.nameRuby {
+		font-size: 2vw;
+	}
+	.aboutName {
+		font-size: 5vw;
+		margin-top: 3vw;
+	}
+	.aboutSentence {
+		font-size: 2vw;
+		line-height: 1.5em;
+	}
+	.hobbyMain {
+		padding-left: 20vw;
+		padding-right: 20vw;
+		padding-top: 5vw;
+		padding-bottom: 5vw;
+	}
+	.hobbyTitle {
+		font-size: 5vw;
+	}
+	dl {
+		text-align: start;
+	}
+	dt {
+		font-size: 4vw;
+		padding-top: 5vw;
+		padding-bottom: 1vw;
+	}
+	dd {
+		font-size: 2vw;
+		line-height: 1.5em;
+	}
+}
